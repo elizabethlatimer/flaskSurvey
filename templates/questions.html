@@ -14,6 +14,12 @@
     <input type="radio" name="answer" value="{{ choice }}"> {{ choice }} <br>  
     {% endfor %}
 
+    {% if allow_text %}
+    <label> Comments: 
+        <textarea name="comments" cols="30" rows="10"></textarea>
+    </label>
+    {% endif %}
+    
     <input type="text" name="next_number" value="{{next_number}}" hidden>
     <button>Go!</button>
 </form>
